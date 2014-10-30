@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Spooky Stories</title>
+    <link type="text/css" rel="stylesheet" href="/assets/css/style.css"/>
+  </head>
+  <body style = "background-color:white;">
+
+  	<div id="story" style= "background-color: linen;">
+  		<p>"You are standing in the front hall. In front of you is a set of creaky stairs. To your right, a door half off its hinges hides what looks like a library. Which do you choose?"</p>
+
+
+  		<input type = "Button" id = "10" value = "Stairs" onclick = "sendChoice(this.id)"></input>
+  		<input type = "Button" id = "11" value = "Door" onclick = "sendChoice(this.id)"></input>
+  		<!-- This is where the story is displayed. -->
+  	</div>
+
+	<script type="text/javascript">
+
+	</script>
+
+    <script type="text/javascript" src = "/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src = "/assets/js/script.js"></script>
+  </body>
+</html>

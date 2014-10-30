@@ -17,13 +17,13 @@ app.use("/assets", express.static(__dirname + '/assets'));
 app.use('/', express.static(__dirname + '/public'));
 
 // Populate redis with story components
-client.hset('story', 1, "You are standing in the front hall. In front of you is a set of creaky stairs. To your right, a door half off its hinges hides what looks like a library. Which do you choose?");
-client.hset('button', 10, "Go up stairs");
-client.hset('button', 11, "Go into library");
+client.hset('story', "1", "You are standing in the front hall. In front of you is a set of creaky stairs. To your left, a door half off its hinges hides what looks like a library. Which do you choose?");
+client.hset('button', "10", "Go up stairs");
+client.hset('button', "11", "Go into library");
 
-client.hset('story', 10, "Walking up the stairs, you can feel each stair give beneath your feet. The railing is covered in cobwebs, and wobbles when you touch it. Do you use the railing?");
-client.hset('button', 100, "Stairs: No railing");
-client.hset('button', 101, "Stairs: Railing");
+client.hset('story', "10", "Walking up the stairs, you can feel each stair give beneath your feet. The railing is covered in cobwebs, and wobbles when you touch it. Do you use the railing?");
+client.hset('button', "100", "No railing");
+client.hset('button', "101", "Railing");
 
 client.hset('story', 100, "You wobble as you go up the stairs, but you keep your hands away from the railing. Your foot cracks the top stair, but you leap at the last moment onto the landing. Your heart is racing, and just as you start to catch your breath, the door at the end of the hall starts to shimmer and move. Do you go towards the door, or run back down the stairs?");
 client.hset('button', 1000, "go towards the light")
@@ -55,8 +55,8 @@ client.hset('button', 1111, "Yes, pick up the key.");
 client.hset('story', 1100, "You frown at the book and back slowly away. As it comes towards you, you start moving faster and faster. You turn at the door just as the book starts hitting you on the head and shoulders. You hear a voice scream, 'Listen!' but the terror has overwhelmed your curiousity. ");
 client.hset('story', 1101, "Book: Yes, I want to know what's going on.");
 
-client.hset('story', 1110, "Desk: investigate");
-client.hset('story', 1111, "Desk: ignore");
+client.hset('story', 1110, "investigate");
+client.hset('story', 1111, "ignore");
 
 
 io.on('connection', function(socket){
@@ -74,10 +74,29 @@ io.on('connection', function(socket){
 	socket.on('choice', function(data){
 /* pass data from browser, which indexes the hash of text story components. 
 In this section we retrieve.
-*/
+*/		console.log('button says ' + data);
 		client.hget('story', data, function(err, reply){
-			socket.emit('message', reply);
+			socket.emit('message', reply); // send text from current choice to the browser
 		});
+
+// retrieve text from next two buttons		
+		var dkey = data.toString();
+		dkey0 = dkey + "0";
+		console.log(dkey0);
+		client.hget('button', dkey0, function(err, reply){
+			console.log(dkey0);
+			socket.emit('button', dkey0 + ":" + reply);
+		});
+
+		dkey1 = dkey + "1";
+		console.log(dkey1);
+		client.hget('button', dkey1, function(err, reply){
+			console.log(dkey1);
+			socket.emit('button', dkey1 + ":" + reply);
+		});
+
+
+//		socket.emit('tree', data);
 	});
 	
 	socket.on('disconnect', function(){

@@ -1,0 +1,126 @@
+/* Speak Friend and Enter style sheet */
+@import 'http://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400)';
+
+body {
+  background: url(../images/background-cover.jpg) top left no-repeat #666666;
+}
+
+@font-face {
+  font-family: "foundation-icons";
+  src: url("../fonts/foundation-icons/foundation-icons.eot");
+  src: url("../fonts/foundation-icons/foundation-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/foundation-icons/foundation-icons.woff") format("woff"), url("../fonts/foundation-icons/foundation-icons.ttf") format("truetype"), url("../fonts/foundation-icons/foundation-icons.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+h1{
+	color: #fafafa;
+	font-weight: bold;
+	text-align: center;
+}
+
+h2 {
+	color: #5c5961;
+	text-align: center;
+}
+
+
+a {
+	color: #fafafa;
+	text-align: center;
+}
+
+table {
+	border: 2px solid #5c5961;
+	border-radius: 5px;
+	background: rgba(21, 111, 120, 0.6); color: #fafafa;
+}
+
+tr{
+	border: 0;
+}
+
+
+#main-section {
+
+}
+
+.matting {
+	margin-right: auto;
+	margin-left: auto;
+	width: 60%;
+	background-color: #fafafa;
+
+}
+
+.panel-cover {
+  display: block;
+  position: fixed;
+  z-index: 900;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  background: url(../images/background-cover.jpg) top left no-repeat #666666;
+  background-size: cover; }
+
+ .panel-cover--overlay {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(21, 111, 120, 0.6);
+  background-image: -webkit-linear-gradient(-410deg, rgba(21, 111, 120, 0.6) 20%, rgba(6, 31, 33, 0.8));
+  background-image: linear-gradient(140deg,rgba(21, 111, 120, 0.6) 20%, rgba(6, 31, 33, 0.8)); }
+
+.chat-container{
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 10px 10px 5px #888888;
+	height: 600px;
+}
+
+
+#msgDescription{
+	padding-top: 10px;
+	font-size: 20px;
+}
+
+
+#chatlist{
+	width: 20%;
+	text-align: left;
+	vertical-align: top;
+	color: #fafafa;
+	border-right: 2px solid #5c5961;
+}
+
+#messages {
+	
+	float: right;
+	text-align: left;
+	background-color: #eee; 
+	color: 
+	margin-top: 5px;
+
+	height: 300px;
+	width: 100%;
+	overflow: auto;
+
+}
+#messages { list-style-type: none; }
+#messages li { padding: 5px 10px; color: #5c5961;}
+#messages li:nth-child(odd) { background: rgba(21, 111, 120, 0.6); color: #fafafa;}
+
+
+
+#m {
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+}

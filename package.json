@@ -1,0 +1,11 @@
+{
+  "name": "hack-cyoa",
+  "version": "0.0.1",
+  "description": "Choose your own adventure game for Hallowe'en hackathon",
+  "dependencies": {
+    "express": "^4.9.5",
+    "redis": "^0.12.1",
+    "socket.io": "^1.1.0",
+    "sqlite3": "^3.0.2"
+  }
+}

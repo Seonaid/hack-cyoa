@@ -15,6 +15,10 @@ document.getElementById('yes').onclick = function (){
 	server.emit('join');
 };
 
+document.getElementByClass('king').onclick = function (){
+	location.href = "/king.html";
+};
+
 var socket = io();
 $('form').submit(function(){
 

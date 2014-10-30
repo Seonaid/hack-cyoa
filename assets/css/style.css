@@ -5,6 +5,10 @@
 	font-family: scream-again;
 	src: url('scream.ttf') format('truetype');
 }
+@font-face {
+	font-family: creepy-wide;
+	src: url('creepy-wide.ttf') format('truetype');
+}
 
 body {
 	background-color: black;
@@ -64,12 +68,6 @@ tr{
 	border: 0;
 }
 
-
-#story {  /*house.html*/
-	font-family: scream-again;
-	color: #eeeeee;
-}
-
 #no {
 	margin-left: 35%;
 	padding: 15px;
@@ -78,13 +76,27 @@ tr{
 	margin-left: 52%;
 	padding: 15px;
 }
-
 .matting {
 	margin-right: auto;
 	margin-left: auto;
 	width: 60%;
 	background-color: #fafafa;
 
+}
+
+#story {  /*house.html*/
+	clear: both;
+	font-family: creepy-wide;
+	color: #eeeeee;
+	position: absolute;
+	color: darkred;
+	text-shadow: -1px -1px 0px #000,
+	1px 1px 0px grey,
+	2px 2px 0px grey,
+	-2px -2px 0px #000;
+	font-size: 40px;
+	margin-top: 20%;
+	margin-left: 20%;
 }
 
 .panel-cover {
@@ -119,7 +131,16 @@ tr{
 	box-shadow: 10px 10px 5px #888888;
 	height: 600px;
 }
+.king{
+	position: absolute;
+	margin-left: 17%;
+	margin-top: 27%;
+	height: 250px;
+	width: 100px;
+	background: rgba(120, 109, 118, 0.1);
+	border: none;
 
+}
 
 #msgDescription{
 	padding-top: 10px;

@@ -21,6 +21,7 @@ h1{
 	position: absolute;
 	margin: 20px;
 	margin-left= 35%;
+	font-family: scream-again;
 	clear: both;
 	color: #fafafa;
 	font-weight: bold;
@@ -41,7 +42,12 @@ h2 {
 
 button{
 	position: absolute;
-	margin: 35%;
+	margin-left: 35%;
+	margin-top: 30%;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0.5);
+	font-family: scream-again;
+	color: #eeeeee;
 }
 a {
 	color: #fafafa;
@@ -59,8 +65,18 @@ tr{
 }
 
 
-#main-section {
+#story {  /*house.html*/
+	font-family: scream-again;
+	color: #eeeeee;
+}
 
+#no {
+	margin-left: 35%;
+	padding: 15px;
+}
+#yes {
+	margin-left: 52%;
+	padding: 15px;
 }
 
 .matting {

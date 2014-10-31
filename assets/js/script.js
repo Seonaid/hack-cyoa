@@ -15,12 +15,14 @@ $('form').submit(function(){
 });
 
 socket.on('message', function(msg){
-	console.log(msg);
-	$('#story').append($('<li>').text(msg));
+    var x = msg;
+	$('#story').html(msg);
 });
 
 function sendChoice(clicked_id){
 	server.emit('choice', clicked_id);
+    $('.yes').remove();
+    $('.no').remove();
 }
 
 function add(type, data) {
@@ -28,6 +30,12 @@ function add(type, data) {
     var element = document.createElement("input");
     //Assign different attributes to the element. 
     info = data.split(":"); 
+    if (info[0]%2 === 0) {
+        element.className = "yes";
+    }
+    else{
+        element.className = "no";
+    }
 
     element.type = type;
     element.value = info[1];
@@ -35,10 +43,12 @@ function add(type, data) {
     element.onclick = function() { // Note this is a function
         sendChoice(this.id);
     };
-
+/*
     var foo = document.getElementById("story");
     //Append the element in page (in span).  
     foo.appendChild(element);
+*/
+    $("body").append(element);
 
   
 }
@@ -51,4 +61,6 @@ socket.on('button', function(text){
 
 socket.on('picture', function(url){
 	document.getElementById("backpic").src = url;
+ //   $(".yes", ".no").remove();
+
 });

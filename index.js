@@ -22,15 +22,15 @@ client.hset('images', "1", "/assets/css/spookyStairs.jpg");
 client.hset('button', "10", "Go up stairs");
 client.hset('button', "11", "Go into library");
 
-client.hset('story', "10", "Walking up the stairs, you can feel each stair give beneath your feet. The railing is covered in cobwebs, and wobbles when you touch it. Do you use the railing?");
+client.hset('story', "10", "Walking up the stairs, you can feel each stair give beneath your feet. The railing is covered in cobwebs, and wobbles when you touch it. Do you continue or run?");
 client.hset('images', "10", "/assets/css/spookyStairsup.jpg");
-client.hset('button', "100", "No railing");
-client.hset('button', "101", "Railing");
+client.hset('button', "100", "Continue");
+client.hset('button', "101", "Run");
 
-client.hset('story', "100", "You wobble as you go up the stairs, but you keep your hands away from the railing. Your foot cracks the top stair, but you leap at the last moment onto the landing. Your heart is racing, and just as you start to catch your breath, the door at the end of the hall starts to shimmer and move. Do you go towards the door, or run back down the stairs?");
+client.hset('story', "100", "You stumble up the stairs, your foot cracks the top step, but at the last moment you leap onto the landing. Your heart is racing, as you catch the door at the end of the hall starts to shimmer and move. Do you go towards the door, or run back down the stairs?");
 client.hset('images', "100", "/assets/css/spookyStairsup.jpg");
-client.hset('button', "1000", "go towards the light")
-client.hset('button', "1001", "run down the stairs");
+client.hset('button', "1000", "Investigate")
+client.hset('button', "1001", "Run");
 
 client.hset('story', "1000", "As you walk down the hallway, the glow behind the door becomes more and more intense. The door is visibly writhing and the handle avoids you when you reach for it. Do you try to catch it?");
 client.hset('button', "10000", "give up");
@@ -51,7 +51,8 @@ client.hset('story', "110", "bookshelf: As you walk forward, a book floats off t
 client.hset('button', "1100", "No, I get out of here!");
 client.hset('button', "1101", "Yes, I want to know what's going on.");
 
-client.hset('story', "111", "The desk chair pushes back and you feel compelled to sit in it. As you do, it pulls itself back in and a pen rises from the top of the desk. The pen writes the words, 'I am lost' on the pad of paper in front of you. As you watch it fall, the drawer beside you opens, and papers begin to stream out. They fly around your head and with the last one, a key falls upon the desk. It appears to be pulsating. Do you pick it up?");
+client.hset('story', "111", "You Lose. Don't you know never to trust clowns?");
+client.hset('images', "100", "/assets/css/lose.jpg");
 client.hset('button', "1110", "No, I look at the papers.");
 client.hset('button', "1111", "Yes, pick up the key.");
 

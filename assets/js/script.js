@@ -21,7 +21,7 @@ socket.on('message', function(msg){
 
 function sendChoice(clicked_id){
     var instr = document.getElementById(clicked_id).value;
-    alert(instr);
+//    alert(instr);
     if(instr != "Run"){
 	   server.emit('choice', clicked_id);
         $('.yes').remove();

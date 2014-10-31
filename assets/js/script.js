@@ -48,7 +48,7 @@ function add(type, data) {
     //Append the element in page (in span).  
     foo.appendChild(element);
 */
-    $("body").append(element);
+    $("#buttons").append(element);
 
   
 }

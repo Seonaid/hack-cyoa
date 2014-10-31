@@ -45,13 +45,19 @@ h2 {
 }
 
 input[type=button]{
+<<<<<<< HEAD
 	float:left;
 	margin-left: 35%;
+=======
+	position: absolute;
+>>>>>>> 6cde586e83606e7d285bea943948953e7cd1a54a
 	margin-top: 30%;
+	margin-right: 10%;
 	height: 50px;
 	background-color: rgba(0, 0, 0, 0.5);
 	font-family: scream-again;
 	color: #eeeeee;
+
 }
 a {
 	color: #fafafa;
@@ -68,6 +74,7 @@ tr{
 	border: 0;
 }
 
+<<<<<<< HEAD
 img.backpic{
 	  /* Set rules to fill background */
   min-height: 100%;
@@ -94,6 +101,8 @@ img.backpic{
 	float: right;
 	color:orange;
 }
+=======
+>>>>>>> 6cde586e83606e7d285bea943948953e7cd1a54a
 .matting {
 	margin-right: auto;
 	margin-left: auto;
@@ -115,10 +124,19 @@ img.backpic{
 	2px 2px 0px grey,
 	-2px -2px 0px #000;
 	font-size: 40px;
-	margin-top: 10%;
-	margin-left: 20%;
 }
-
+.no{
+	margin-left: 35%;
+	padding: 15px;
+	float: left;
+	color:orange;
+}
+.yes{
+	margin-left: 62%;
+	padding: 15px;
+	float: right;
+	color:orange;
+}
 .panel-cover {
   display: block;
   position: fixed;

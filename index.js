@@ -17,7 +17,7 @@ app.use("/assets", express.static(__dirname + '/assets'));
 app.use('/', express.static(__dirname + '/public'));
 
 // Populate redis with story components
-client.hset('story', "1", "You are standing in the front hall. In front of you is a set of creaky stairs. To your left, a door half off its hinges hides what looks like a library. Which do you choose?");
+client.hset('story', "1", "You creep through the front door and feel a chill run down your spine. Do you go up the cobwebbed stairs or follow the ghost into the library?");
 client.hset('images', "1", "/assets/css/spookyStairs.jpg");
 client.hset('button', "10", "Go up stairs");
 client.hset('button', "11", "Go into library");
@@ -42,10 +42,10 @@ client.hset('story', "101", "You place your hand on the railing and feel somethi
 
 
 
-client.hset('story', "11", "You place your hand upon the handle of the door and feel a rush of cold air pass you as you push the door to the library open. You see a desk under a broken window and a bookshelf at the far end of the room next to a smoking fireplace. Do you investigate the bookshelf or the desk?");
+client.hset('story', "11", "The little girl informs you that IT is watching you and unless you find IT soon, IT will take over your mind and control you and you will end up like dad(the skeleton). Do you Search or Run?");
 client.hset('images', "11", "/assets/css/library.jpg");
-client.hset('button', "110", "bookshelf");
-client.hset('button', "111", "desk");
+client.hset('button', "110", "Run");
+client.hset('button', "111", "Search");
 
 client.hset('story', "110", "bookshelf: As you walk forward, a book floats off the shelf and opens itself in front of you. The page shakes and words appear in red,. As they scrawl across the page, you hear a voice rasp, 'Heeellpppp... mmmmeeeee.' Do you come closer to the book? ");
 client.hset('button', "1100", "No, I get out of here!");

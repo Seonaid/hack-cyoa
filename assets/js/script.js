@@ -61,9 +61,13 @@ function add(type, data) {
 }
 
 socket.on('button', function(text){
-	add('button', text);
-	buttonBits = text.split(":");
-	buttonId = text[0];
+    buttonBits = text.split(":");
+    buttonId = buttonBits[0];
+    buttonValue = buttonBits[1];
+    if(buttonValue != "null"){
+    	add('button', text);
+    }
+
 });
 
 socket.on('picture', function(url){

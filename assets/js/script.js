@@ -20,9 +20,16 @@ socket.on('message', function(msg){
 });
 
 function sendChoice(clicked_id){
-	server.emit('choice', clicked_id);
-    $('.yes').remove();
-    $('.no').remove();
+    var instr = document.getElementById(clicked_id).value;
+    alert(instr);
+    if(instr != "Run"){
+	   server.emit('choice', clicked_id);
+        $('.yes').remove();
+        $('.no').remove();
+    }
+    else{
+        window.location.href = "http://www.buzzfeed.com/michelleregna/scaredy-cats";
+    }
 }
 
 function add(type, data) {

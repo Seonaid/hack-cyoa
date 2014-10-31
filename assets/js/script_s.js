@@ -43,13 +43,6 @@ function add(type, data) {
   
 }
 
-socket.on('tree', function(data){
-
-	alert('in tree');
-
-
-});
-
 socket.on('button', function(text){
 	add('button', text);
 	buttonBits = text.split(":");

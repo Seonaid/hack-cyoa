@@ -45,7 +45,7 @@ h2 {
 }
 
 input[type=button]{
-	position:absolute;
+	position: absolute;
 	margin-top: 30%;
 	margin-right: 10%;
 	height: 50px;
@@ -79,7 +79,9 @@ tr{
 
 #story {  /*house.html*/
 	clear: both;
+	padding: -5px;
 	background-color: linen;
+	margin: 11%;
 	background:rgba(245,245,245,0.25);
 	font-family: creepy-wide;
 	color: #eeeeee;
@@ -92,13 +94,13 @@ tr{
 	font-size: 40px;
 }
 .no{
-	margin-left: 35%;
+	margin-left: 32%;
 	padding: 15px;
 	float: left;
 	color:orange;
 }
 .yes{
-	margin-left: 62%;
+	margin-left: 60%;
 	padding: 15px;
 	float: right;
 	color:orange;

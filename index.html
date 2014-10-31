@@ -8,26 +8,31 @@
     <div>
       <h1>Welcome to Bates Motel</h1>
       <h2>Are you Brave Enough to Enter?</h2>
-      <input type= 'button' class='no' value="No, I'm too Scared!"></input>
-      <input type="button" class="yes" value ="Yeah I am! Bring It!"></input>
-      <img src="http://www.robgolfi.com/wp/wp-content/uploads/haunted_house.png" width="100%" height="100%">
-
+      <input type= 'button' class='no' value="No, I'm too Scared!" />
+      <input type="button" class="yes" value ="Yeah I am! Bring It!" />
     </div>
 
-    <script>
-      document.getElementByClass("no").onclick =function(){
-        location.href = "http://www.buzzfeed.com/michelleregna/scaredy-cats";
-      };
+    <img src="http://www.robgolfi.com/wp/wp-content/uploads/haunted_house.png" width="100%" height="100%">
 
-      document.getElementByClass('yes').onclick = function (){
-        location.href = "/house.html";
-        server.emit('join');
-      };
-    </script>
 
     <script type="text/javascript" src = "/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src = "/assets/js/script.js"></script>
+
+    <script>
+
+      $(document).ready(function(){
+        console.log("ready");
+      $('.no').click(function(){
+        window.location.href= "http://www.buzzfeed.com/michelleregna/scaredy-cats";
+      });
+     $('.yes').click(function(){
+       window.location.href = "/house.html";
+     });
+      })
+    </script>
+
+
   </body>
 </html>
 

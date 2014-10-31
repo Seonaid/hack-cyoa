@@ -9,15 +9,28 @@
   	<div id="story">   
 
       <p>"You are standing in the front hall. In front of you is a set of creaky stairs. To your right, a door half off its hinges hides what looks like a library. Which do you choose?"</p>
-
-
-      <input type = "Button" class = "yes" id = "10" value = "Stairs" onclick = "sendChoice(this.id)"></input>
-      <input type = "Button" class = "no" id = "11" value = "Door" onclick = "sendChoice(this.id)"></input>
     </div>
+
+      <input type = "Button" class = 'no' id = "10" value = "Stairs" onclick = "sendChoice(this.id)"/>
+      <input type = "Button" class = 'yes' id = "11" value = "Door" onclick = "sendChoice(this.id)"/>
+
     <img id="staircase" src="/assets/css/spookyStairs.jpg" width="100%" height="100%">
 
     <script type="text/javascript" src = "/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src = "/assets/js/script.js"></script>
+    <script>
+
+      $(document).ready(function(){
+        console.log("ready");
+        $('.no').click(function(){
+          window.location.href= "/stairsup.html";
+        });
+        $('.yes').click(function(){
+          window.location.href = "/library.html";
+        });
+      })
+    </script>
+
   </body>
 </html>

@@ -27,14 +27,13 @@ client.hset('images', "10", "/assets/css/spookyStairsup.jpg");
 client.hset('button', "100", "Continue");
 client.hset('button', "101", "Run");
 
-client.hset('story', "100", "You stumble up the stairs, your foot cracks the top step, but at the last moment you leap onto the landing. Your heart is racing, as you catch the door at the end of the hall starts to shimmer and move. Do you go towards the door, or run back down the stairs?");
-client.hset('images', "100", "/assets/css/spookyStairsup.jpg");
+client.hset('story', "100", "You stumble up the stairs. Your heart is racing, as you catch your breath, the door at the end of the hall starts to shimmer and move. Do you go towards the door, or run back down the stairs?");
+client.hset('images', "100", "/assets/css/creepyHallway.jpg");
 client.hset('button', "1000", "Investigate")
 client.hset('button', "1001", "Run");
 
-client.hset('story', "1000", "As you walk down the hallway, the glow behind the door becomes more and more intense. The door is visibly writhing and the handle avoids you when you reach for it. Do you try to catch it?");
-client.hset('button', "10000", "give up");
-client.hset('button', "10001", "grab the knob");
+client.hset('story', "1000", "Inside, you find: THE PIT OF DESPAIR!");
+client.hset('images', "1000", "/assets/css/despair copy.jpg");
 
 client.hset('story', "1001", "You turn and race back down the stairs, barely touching each step beneath you. You can feel the entire staircase shaking under your weight, and what little bit of your mind is left fears what might happen if the staircase collapses... but the terror of whatever is up there has overcome your desire to explore. You burst through the front door and collapse on the lawn as the building starts to shake. Light radiates from every window and you hear a scream of rage... but you have lived to tell about it.");
 
@@ -52,16 +51,14 @@ client.hset('button', "1100", "No, I get out of here!");
 client.hset('button', "1101", "Yes, I want to know what's going on.");
 
 client.hset('story', "111", "You Lose. Don't you know never to trust clowns?");
-client.hset('images', "100", "/assets/css/lose.jpg");
-client.hset('button', "1110", "No, I look at the papers.");
-client.hset('button', "1111", "Yes, pick up the key.");
+client.hset('images', "111", "/assets/css/lose.jpg");
 
-
+/*
 client.hset('story', "1100", "You frown at the book and back slowly away. As it comes towards you, you start moving faster and faster. You turn at the door just as the book starts hitting you on the head and shoulders. You hear a voice scream, 'Listen!' but the terror has overwhelmed your curiousity. ");
 client.hset('story', "1101", "Book: Yes, I want to know what's going on.");
 
 client.hset('story', "1110", "investigate");
-client.hset('story', "1111", "ignore");
+client.hset('story', "1111", "ignore");*/
 
 
 io.on('connection', function(socket){

@@ -48,3 +48,7 @@ socket.on('button', function(text){
 	buttonBits = text.split(":");
 	buttonId = text[0];
 });
+
+socket.on('picture', function(url){
+	document.getElementById("backpic").src = url;
+});

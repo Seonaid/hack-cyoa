@@ -9,7 +9,7 @@
       <h1>Welcome to Bates Motel</h1>
       <h2>Are you Brave Enough to Enter?</h2>
       <input type= 'button' class='no' value="No, I'm too Scared!"></input>
-      <input type="button" class="yes" value ="Yeah I am! Bring It!"></input>
+      <input type="button" class="yes" value ="Yeah I am! Bring It!" id = "1" onclick = "sendChoice(this.id)"></input>
       <img src="http://www.robgolfi.com/wp/wp-content/uploads/haunted_house.png" width="100%" height="100%">
 
     </div>
@@ -19,10 +19,10 @@
         location.href = "http://www.buzzfeed.com/michelleregna/scaredy-cats";
       };
 
-      document.getElementByClass('yes').onclick = function (){
-        location.href = "/house.html";
-        server.emit('join');
-      };
+/*      document.getElementByClass('yes').onclick = function(id){
+        location.href = "/house_test.html";
+        server.emit('choice', id);
+      }; */
     </script>
 
     <script type="text/javascript" src = "/socket.io/socket.io.js"></script>
